@@ -12,6 +12,18 @@ License authorization has been patched and will hit success for any input, lul.
 1. Rizin Reverse Engineering Framework     
  [Arch Package](<https://man.archlinux.org/man/rizin.1.en>) | [Github](<https://github.com/rizinorg/rizin>)
 
+```bash
+cp *.dll *.dll.bak
+rizin -w *.dll
+aa
+s 0x18004aa09
+wx e9e200000090
+s 0x18004adea
+wx 909090909090
+q
+```
+
+
 2. Nefarius' Injector (Ran under Wine)    
 [Github](<https://github.com/nefarius/Injector>)
 
