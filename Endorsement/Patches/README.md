@@ -16,7 +16,9 @@ else if (key == L"ShotsPerBurst")   PatchFloat(1.0f);
 ```
 
 ### Native Notifications
-Hooks (all use the same toggle, prefix returns false to block):
+Other players can use cheats to spawn and spam notifications of various types, which can crash the client. Blocking them at the receive and UI layers stops it.
+
+Hooks (prefix returns false to block):
 
 Network received
 - `NotificationController_OnNotificationReceived`
