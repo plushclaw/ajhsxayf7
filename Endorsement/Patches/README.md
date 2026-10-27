@@ -15,3 +15,18 @@ else if (key == L"ProjectilesPerShot")   PatchFloat(1.0f);
 else if (key == L"ShotsPerBurst")   PatchFloat(1.0f);
 ```
 
+### Native Notifications
+Hooks (all use the same toggle, prefix returns false to block):
+
+Network received
+- `NotificationController_OnNotificationReceived`
+- `MVNetworkGame_OnNotificationEventReceived`
+
+Local UI entry points
+- `NotificationController_PushNotification` (3 overloads, patch all)
+- `NotificationController_PushNoticationInstruction` (spelled this way in the game, patch all overloads)
+- `NotificationsManager_InstantiateNotification`
+- `NotificationArea_InstantiateNotification`
+- `NotificationAreaQueue_InstantiateNotification`
+- `NotificationAreaSingleInstance_InstantiateNotification`
+- `NotificationAreaSingleInstanceQueue_InstantiateNotification`
